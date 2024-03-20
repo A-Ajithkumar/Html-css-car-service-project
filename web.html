@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        background-image: url(images/luxurious-car-parked-highway-with-illuminated-headlight-sunset_181624-60607.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;    
+    }
+    .navbox{
+        position: fixed;
+        width: 100%;
+    }
+    html{
+        scroll-behavior: smooth;
+        scroll-padding: 5rem;
+    }
+    .logo img{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgba(0,0,0,.3);  
+        
+        
+    }
+    ul li{
+        list-style-type:none;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    a:hover{
+        color: blue;
+    }
+    input{
+        margin: 10px;
+        padding: 4px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+    
+    }
+    button{
+        padding: 5px 10px;
+        background-color: skyblue;
+        color: white;
+    }
+    button:hover{
+        background-color: blue;
+    }
+    .main{
+        color: white;
+        float: right;
+        margin-top: 250px;
+        margin-right: 150px;
+        font-weight: bold;
+        font-size: larger;
+
+    }
+
+    /* Service */
+    .service{
+        border: 2px solid green;
+        
+        /* margin: 40px 40px 20px 40px; */
+        justify-content: space-around;
+        /* margin: 50px 80px; */
+        background: #dbfbf4;
+        
+    }
+
+    .service .box1 img{
+        width: 150px;
+        height: 150px;
+        float: left;
+        margin-left: 20px;
+        display: flex;
+    }
+    
+    .service h1{
+        text-align: center;
+        margin-top: 50px;
+    
+    }
+    .content1{
+        margin: 70px;
+        font-family: sans-serif;
+        margin-left: 220px;
+
+    }
+    .content1 p{
+        margin-top: 5px;
+    }
+   
+    .content2{
+        margin: 40px 20px;
+        font-family: sans-serif;
+        float: left;
+    }
+    .content2 p{
+        margin-top: 5px;
+    }
+    .box2 img{
+        width: 150px;
+        height: 150px;
+        margin-left: 20px;
+    }
+    
+
+
+    
+  /* About us */
+    .about{
+        font-family: sans-serif;
+        /* margin: 30px 30px; */
+        height: 100vh;
+        display: flex;
+        background: #cfd6f9;
+    }
+    
+    .aboutitem img{
+        width: 600px;
+        height: 500px;
+        float: right;
+    }
+    .aboutcontent h1{
+        text-align: center;
+        margin: 100px 0px 30px 0px;
+
+    }    
+    .aboutcontent p{
+        margin: 0px 20px 0px 20px;
+        word-spacing: 5px;
+        line-height: 30px;
+        
+    }    
+    /* Contact us */
+
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        text-align: center;
+        background: #e5dae7;
+        height: 100vh;
+    }
+    .imgcontact img{
+        width: 300px;
+        height: 300px;
+        margin: 50px;
+    }
+    .container{
+        padding: 40px;
+        margin-top: 50px;
+        width: 100%;
+        max-width: 600px;   
+        height: 500px;  
+        border-radius: 25px;
+        background: rgb(0 59 90 / 61%);
+        color: #fff;
+    }
+    .contact-section h2{
+        margin:30px
+    }
+    .contact-section,.input, .button{
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        padding: 10px 15px;
+    }
+     .contact-section input{
+        padding: 10px 15px;
+    }
+    textarea{
+        padding: 10px 25px;
+    }
+    .contact-section .btn{
+        background:lightblue;
+        cursor: pointer;
+    
+    }
+    .contact-section .btn:hover{
+        background: #076ca0;
+
+    }
+/* footer */
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        background:rgb(30, 1, 43);
+        
+     }
+     .footeritem1{
+        margin: 40px 0px 0px 30px ;
+        color: #fff;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+     }
+     .footeritem1 ,h3 ,h4{
+        padding: 10px;
+     }
+     .footeritem2{
+        margin: 40px 0px 0px 30px ;
+        color: #fff;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+
+     }
+     .footeritem2 , p{
+        padding: 10px;
+     }
+     .footeritem3{
+        margin: 40px 30px;
+     }
+
+
+
+    
+</style>
+<body>
+    <div class="box" id="homeid">
+        <div class="navbox">
+            <nav>
+            <div class="logo">
+                <h3><img src="images/Car beauty.png" alt=""></h3>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="#homeid">Home</a></li>
+                    <li><a href="#serviceid">Service</a></li>
+                    <li><a href="#aboutid">About</a></li>
+                    <!-- <li><a href="#">Projects</a></li> -->
+                    <li><a href="#contactid">Contact</a></li>
+                </ul>
+            </div>
+            <div class="searchBar">
+                <input type="text" placeholder=" search here">
+                <button type="submit">search</button>
+            </div>
+        </div>
+        
+        </nav>
+        <div class="main">
+            <h1>Professional Car Repairs</h1>
+            <h2> And Services</h2   >
+        </div>
+    </div> 
+
+     <!-- Service -->
+
+    <div class="service" id="serviceid">
+        <h1>Service</h1>
+
+        <div class="box1">
+            <img src="images/denting.jpg" alt="#">
+        </div>
+        <div class="content1">
+            <h3> Denting and Painting</h3>
+            <p>Bumped your car? We are here at your service, with our team of professionals to help with you the solution</p>
+        </div> 
+
+        <div class="box2">
+            <div class="content2">
+            <h3>Mechanical problems</h3>
+            <p> We help you to diagnose and repair all the mechanical problems that you may be experiencing with your car</p>
+            </div>
+            <div>
+                <img src="images/mechanic.jpg" alt="#">
+            </div>
+        </div>
+        
+        <div class="service-item3">
+            
+            <div class="content3">
+                
+                <div class="box1">
+                    <img src="images/car-engine_1373-181.jpg" alt="#">
+                </div>
+                <div class="content1">
+                    <h3>Engine Repairs</h3>
+                <p>Got engine problems? We have a dedicated staff, giving the best and most reliable engine repair services</p>
+
+                </div>
+            </div> 
+        </div>
+    </div>    
+     <!-- Service end -->
+
+      <!-- About -->
+
+
+     <div class="about" id="aboutid">
+        <div class="aboutcontent">
+        <h1>About Us</h1>
+        <p>We Car Beauty located in Peelamedu, Coimbatore, Tamilnadu pride ourselves in offering our customers with standardised car repair service at a competitive price. Our young energetic and genius team's sole purpose is to achieve the highest level of customer satisfication by making an easy and quality experience. Our service are not limited, as we also provide other service like car washing, wheel balancing and many more to fulfil our clients requirement.</p>
+        </div>
+        <div class="aboutitem">
+            <img src="images/engine.jpg" alt="#">
+        </div>
+    </div> 
+
+    <!-- About end -->
+
+
+    <!-- contact us -->
+
+    <div class="contact" id="contactid">
+        <div class="imgcontact">
+            <img src="images/tagline.jpg" alt="#">
+        </div>
+        <div class="container">
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <form action="#">
+                    <div class="input">
+                             <input type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="input">
+                            <input type="email" placeholder="Enter your email">
+                        </div>
+                        <div class="input">
+                             <textarea placeholder="Message"></textarea>
+                        </div> 
+                        <div >  
+
+                        <input type="submit" class="btn" value="submit" name="">
+                        </div>
+                
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- contact end -->
+
+    <div class="footer">
+
+        <div class="footeritem1">
+        <h3>USEFUL LINKS </h3>
+        <h4>PRIVACY POLICY</h4>
+        <h4>SERVICES</h4>
+        <h4>GALLERY</h4>
+        </div>
+
+        <div class="footeritem2">
+            <h3>Our Office Address</h3>
+            <p>Palm court bldg M, 501/B, 5th Floor,New<br>
+            Link road, Vilankurichi<br>
+            Peelamedu, Coimbatore, 642109<br>
+            Tamilnadu</p>
+
+            <h3>Call Us</h3>
+            <p> +91-8888888888</p>
+
+            <h3>General Enquires</h3>
+            <p>websupport@justdial.com</p>
+
+            <h3>Our Timings</h3>
+            <p> Mon - Sun: 10:00AM - 07:00PM</p>
+
+
+        </div>
+
+        <div class="footeritem3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250644.851994435!2d76.67185313328368!3d11.014163253993397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1710847039857!5m2!1sen!2sin" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+    </div>
+</body>
+</html>
